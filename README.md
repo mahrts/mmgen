@@ -13,7 +13,7 @@ A simple Python package that generates memes by combining **random images and qu
 - 🌐 Runs on flask server, and can ingest image input from url
 
 - Structure:
-
+```bash
 ├── pyproject.toml
 ├── requirements.txt
 ├── src
@@ -35,6 +35,7 @@ A simple Python package that generates memes by combining **random images and qu
 │       └── meme.html
 └── tests
     └── test_quoteengine.py
+```
 
 # 📦 Installation
 
