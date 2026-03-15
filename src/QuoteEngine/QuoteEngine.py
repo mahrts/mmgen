@@ -3,9 +3,9 @@
 import os
 from abc import ABC
 from abc import abstractmethod
-import csv
 import subprocess
 import docx
+import pandas as pd
 
 class QuoteModel():
     """Quotes which will be later added to memes."""
@@ -142,21 +142,12 @@ class CsvInterface(IngestorInterface):
             raise Exception("CsvInterface called on non .csv file.")
 
         quote_list = []
-        with open(path, 'r', encoding = "utf-8") as f:
-            file = csv.reader(f)
-            next(file)
-            for row in file:
-                if len(row) > 0:
-                    quote_list.append(row)
-
-        quotes_list = list(map(lambda x: x[0] + " - " + x[1], quote_list))
-        models = []
-        for _, quote in enumerate(quotes_list):
-            if "-" in quote:
-                body = quote.split("-")[0]
-                author = quote.split("-")[1]
-                models.append(QuoteModel(author.strip(), body.strip()))
-        return models
+        file = pd.read_csv(path)
+        for i in range(file.shape[0]):
+            body = file.iloc[i]['body']
+            author = file.iloc[i]['author']
+            quote_list.append(QuoteModel(author.strip(), '"' + body.strip() + '"'))
+        return quote_list
 
 
 class DocxIntefrace(IngestorInterface):
