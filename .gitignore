@@ -46,3 +46,6 @@ htmlcov/
 
 .DS_Store
 Thumbs.db
+
+#Static in app file
+static/
