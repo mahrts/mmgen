@@ -80,6 +80,8 @@ python main.py --help
 ```
 ---
 
+These should create a folder ```bash temp/``` with new image meme int it.
+
 ### 2. Run the Flask server
 
 Go to the directory

@@ -46,7 +46,9 @@ htmlcov/
 
 .DS_Store
 Thumbs.db
+.Rhistory
 
 #Static in app file
 static/
 tmp/
+
