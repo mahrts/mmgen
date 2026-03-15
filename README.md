@@ -50,6 +50,7 @@ pip install -e .
 Or install dependencies only:
 
 ```bash
+cd mmgen
 pip install -r requirements.txt
 ```
 
@@ -61,7 +62,12 @@ The project can be used in two ways: via the **command-line interface (CLI)** or
 
 ### 1. Command-line interface
 
-Run the main script with:
+Go to the directory:
+
+```bash
+cd mmgen/src
+```
+and run the main script with:
 
 ```bash
 python main.py
@@ -76,13 +82,18 @@ python main.py --help
 
 ### 2. Run the Flask server
 
-Start the web server:
+Go to the directory
+```bash
+cd mmgen/src
+```
+and start the web server with:
 
 ```bash
 flask --app app run
 ```
 
-and open the resulting address in your browser to interact with the application.
+Then open the resulting url (usually http://127.0.0.1:5000)
+in your browser to interact with the application.
 
 ---
 
