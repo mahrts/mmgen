@@ -110,7 +110,7 @@ pytest
 ---
 # Future update
 
-Integrate flow matching [flow matching](https://arxiv.org/abs/2210.02747) as default image generator
+Integrate [flow matching](https://arxiv.org/abs/2210.02747) as default image generator (and may be use LLM that to generate memes).
 
 # 🙌 Acknowledgments
 
