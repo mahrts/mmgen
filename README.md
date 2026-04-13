@@ -107,6 +107,11 @@ pytest
 
 ---
 
+---
+# Future update
+
+Integrate flow matching [flow matching](https://arxiv.org/abs/2210.02747) as default image generator
+
 # 🙌 Acknowledgments
 
 This project is from Intermediate Python nanodegree of Udacity
